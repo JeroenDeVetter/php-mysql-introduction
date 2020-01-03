@@ -2,10 +2,13 @@
 require "connection.php";
 require "insert.php";
 
+
 //this line makes PHP behave in a more strict way
 ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
+
+
 ?>
 
 <!DOCTYPE html>
