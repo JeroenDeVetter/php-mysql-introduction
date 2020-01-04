@@ -32,3 +32,26 @@ button {
     background-color: #4CAF50; /* Green */
     color: white;
   }
+
+  #Students {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #Students td, #Students th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #Students tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #Students tr:hover {background-color: #ddd;}
+  
+  #Students th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }

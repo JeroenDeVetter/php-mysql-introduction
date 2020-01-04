@@ -184,7 +184,9 @@ error_reporting(E_ALL);
            ?>
     </form>
 
-    <?php 
+    <h2>Database Table</h2>
+
+    <?php
         showCollumns()
     ?>
 </body>
