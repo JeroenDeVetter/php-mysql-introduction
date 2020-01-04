@@ -1,4 +1,6 @@
 <?php
+
+// Function to Show database Info
 function showCollumns()
 {
     $db = openConnection();
@@ -7,9 +9,11 @@ function showCollumns()
     
     foreach($db->query($select) as $row){   //Creates a loop to loop through results
 
-    echo "<tr><th>Firstname</th><th>Lastname</th><th>E-Mail</th><th>Preferred Language</th><th>Link to Profile</th><tr/>" ."<tr><td>" . $row['first_name'] . "</td><td>" . $row['last_name'] . "</td><td>" . '<a href = "' . $row['email'] . '">' . $row['email'] . '</a>' . "</td><td>" . $row['preferred_language'] . "</td><td>" . "</td>";  //$row['index'] the index here is a field name
+    echo "<tr><th>Firstname</th><th>Lastname</th><th>E-Mail</th><th>Preferred Language</th><th>Link to Profile</th><tr/>" ."<tr><td>" . $row['first_name'] . "</td><td>" . $row['last_name'] . "</td><td>" . '<a href = "' . $row['email'] . '">' . $row['email'] . '</a>' . "</td><td>" . $row['preferred_language'] . "</td><td>" . '<a href = "profile.php?' . $row['student_id'] . $row['first_name'] . '">' . "Profile" . '</a>' . "</td>";  //$row['index'] the index here is a field name
     }
 }
+
+// Function to send data ta db
 function sendToDb($Firstname , $Lastname , $username , $gender , $linked , $github , $email , $preferredLang , $avatar , $video , $quote , $quote_aut) {
     $date = date("l jS \of F Y h:i:s A");
     $db = openConnection();

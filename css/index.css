@@ -55,3 +55,7 @@ button {
     background-color: #4CAF50;
     color: white;
   }
+
+  .inputFile {
+     width: 192px;
+  }

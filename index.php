@@ -74,9 +74,11 @@ error_reporting(E_ALL);
                       
                         ?>
                     </label>
-                    <input type="text" id="gender" name="gender" class="form-control" value="<?php
-                       
-                        ?>"/>
+                    <select name="gender">
+                            <option value="Defauld"> Select Gender </option>
+                            <option value="Man">Man</option>
+                            <option value="Woman">Woman</option>
+                    </select>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -134,9 +136,9 @@ error_reporting(E_ALL);
                       
                         ?>
                     </label>
-                    <input type="text" id="avatar" name="avatar" class="form-control" value="<?php
-                       
-                        ?>"/>
+                    <input name="userImage"
+                type="file" class="inputFile" />
+                    
                 </div>
 
                 <div class="form-group col-md-6">
@@ -180,7 +182,7 @@ error_reporting(E_ALL);
         <button type="submit" class="btn">Send students to db</button>
         <?php
            
-           if ($_SERVER['REQUEST_METHOD'] == 'POST') sendToDb($_POST["firstname"], $_POST["lastname"] , $_POST["username"] , $_POST["gender"] , $_POST["linkedin"] , $_POST["github"] , $_POST["email"] , $_POST["prefLang"] , $_POST["avatar"] , $_POST["video"] , $_POST["quote"] , $_POST["quoteAuthor"])
+           if ($_SERVER['REQUEST_METHOD'] == 'POST') sendToDb($_POST["firstname"], $_POST["lastname"] , $_POST["username"] , $_POST["gender"] , $_POST["linkedin"] , $_POST["github"] , $_POST["email"] , $_POST["prefLang"] , $_POST["userImage"] , $_POST["video"] , $_POST["quote"] , $_POST["quoteAuthor"])
            ?>
     </form>
 
